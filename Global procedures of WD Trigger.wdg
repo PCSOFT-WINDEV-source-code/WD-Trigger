@@ -1,0 +1,179 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : Global procedures of WD Trigger
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x10f4367700d10c99
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  internal_properties : CAAAAAgAAAAwjTgwAD6MQ0U5rVGZksxNF+BrwnYlHgFWvQQhaeI274V/5GkQ4a5ihiw6t189fRD9+R8Jit414+HfMN0U+O+iH6Sjo0eOXfwtmwSdvn7oLGwX0WQluvxwiD3lL+KvsL4htRk89LgaIXKxdpYWkODzGaxK4SXAfuK1xb9OtjB0gjVaso6mcS/tHDnoSnoT0jsDJ4jYGvJ7vTdbh3Kfqu8sxCdMaeIm3FLlG5zuvPZAC2gBFUKguSo+DbSUyMN6bxRUidJL8oCUfOC3aDej
+  type_code : 31
+  p_codes : []
+  procedures :
+   -
+     name : Trigger_Proc
+     internal_properties : CAAAAAgAAACk+LsrE0+7D5GH9bNsw+5rDnaoBUuHDs/toSFF/rmmlyTkiMa2IEsXOXnnntFd5Qtlmrpwc07bOFam92NIIGC7Ro2HdOnU6xmVlCYMQqDxhrlN9wDhqHMfMDWTCcDHKbazFABsao26tZmJoGVBRWe1ZOirJKVK5mT+gneNz0ouePe4D/6MWJ9mrbm4QVqtthlDbhGfL0rbiej9Rwl0wMnT5j7nxCXLeolPxC67X7pefZLQpZl+JwmoKytxuTHdwXnJHbbHig03jNZyc9hqs/38wpPTdKbLjPN5vjEyBIWqlfEDgN9UoKfcYtZ13p4HgQnmGx3oBdX3z8INahkzY2GSLUWZTg==
+     procedure_id : 1221661283667020953
+     type_code : 15
+     code : |1+
+      Procedure Trigger_Proc()
+      
+      // According to the calling trigger
+      SWITCH Upper(H.Action)
+      	CASE “A”  // 'Before' Trigger
+      		// According to the calling function
+      		SWITCH Upper(H.TriggerFunction)
+      			CASE “HADD”
+      				IF gbTrace THEN Trace(<§@3b8b5c017aca59da0001§>)
+      			CASE “HMODIFY”
+      				IF gbTrace THEN Trace(<§@3b8b5c017aca59da0003§>)
+      			CASE “HDELETE”
+      				IF gbTrace THEN Trace(<§@3b8b5c017aca59da0005§>)	
+      				
+      				//1: &Delete
+      				//2: Do&n't delete
+      				SWITCH Dialog(<§?168A10AC010F39A7§>)
+      					
+      					// &Delete
+      					CASE 1
+      					//No action		
+      								
+      					// Do&n't delete
+      					CASE 2
+      						// Cancel the action
+      						H.ToDo = “A”
+      				END
+      				
+      			
+      		END
+      				
+      		IF gsRights<>“E” THEN
+      			Error(<§@3b8b5c017aca59da0007§>)
+      			// Cancel the action
+      			H.ToDo = “A”
+      		END		
+      		
+      	CASE “P”  // 'After' trigger
+      		nFileID is int
+      		sLine is string
+      		
+      		// log file
+      		nFileID = fOpen(CompleteDir(fExeDir())+“logfile.log”, foAdd+foCreateIfNotExist)		
+      		sLine = NetworkUser()+TAB+DateToString(Today())+TAB+TimeToString(Now())
+      		
+      		// According to the calling function
+      		SWITCH Upper(H.TriggerFunction)
+      			CASE “HADD”
+      				IF gbTrace THEN Trace(<§@3b8b5c017aca59da0009§>)
+      				sLine += TAB+<§@3b8b5c017aca59da000a§>
+      				Info(<§@3b8b5c017aca59da000b§>)
+      				
+      			CASE “HMODIFY”
+      				IF gbTrace THEN Trace(<§@3b8b5c017aca59da000c§>)
+      				sLine += TAB+<§@3b8b5c017aca59da000d§>
+      				Info(<§@3b8b5c017aca59da000e§>)
+      				
+      			CASE “HDELETE”
+      				IF gbTrace THEN Trace(<§@3b8b5c017aca59da000f§>)
+      				sLine += TAB+<§@3b8b5c017aca59da0010§>
+      				Info(<§@3b8b5c017aca59da0011§>)
+      		END
+      		
+      		// Log file
+      		fWriteLine(nFileID, sLine)
+      		fClose(nFileID)
+      		
+      		
+      END
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+resources :
+ string_res :
+  identifier : 0x3b8b5c017aca59da
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      en-GB : "Before Trigger: Addition"
+     index : 1
+   -
+     text :
+      en-GB : "Before Trigger: Modification"
+     index : 3
+   -
+     text :
+      en-GB : "Before Trigger: Deletion"
+     index : 5
+   -
+     text :
+      en-GB : You are not allowed to write to the file.
+     index : 7
+   -
+     text :
+      en-GB : "After Trigger: Addition"
+     index : 9
+   -
+     text :
+      en-GB : Addition
+     index : 10
+   -
+     text :
+      en-GB : Addition successfully performed
+     index : 11
+   -
+     text :
+      en-GB : "After Trigger: Modification"
+     index : 12
+   -
+     text :
+      en-GB : Modification
+     index : 13
+   -
+     text :
+      en-GB : Modification successfully performed
+     index : 14
+   -
+     text :
+      en-GB : "After Trigger: Deletion"
+     index : 15
+   -
+     text :
+      en-GB : Deletion
+     index : 16
+   -
+     text :
+      en-GB : The deletion was performed
+     index : 17
+ dialogs :
+  -
+    identifier : 0x168a10ac010f39a7
+    internal_properties : CAAAAAgAAADK6zrgbwza9eeCRXAIzyUGgw01vXhIZ0gp8Hbm3YKVqcWS9+a9jrQ+bus3IEoPRaJJWYhrKMVTima8+0VELbmARbDjYTK0Qcii
+    label :
+     fr-FR : Voulez-vous vraiment supprimer cet enregistrement ?
+     en-GB : Do you want to delete this record?
+    image : {}
+    cancel_button : 1
+    buttons :
+     -
+       label :
+        fr-FR : "&Supprimer"
+        en-GB : "&Delete"
+       image : {}
+       value : 1
+     -
+       label :
+        fr-FR : "&Ne pas supprimer"
+        en-GB : Do &not delete
+       image : {}
+       value : 2
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

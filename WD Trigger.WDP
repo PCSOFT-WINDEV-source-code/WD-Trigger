@@ -1,0 +1,163 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WD Trigger
+ major_version : 28
+ minor_version : 0
+ type : 4097
+ description : "'WD Trigger' Project"
+ subtype : 0
+project :
+ identifier : 0x0
+ internal_properties : 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
+ configurations :
+  -
+    name : WD Trigger
+    internal_properties : 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
+    configuration_id : 1291991361694471124
+    type : 1
+    generation_name : WD Trigger.exe
+    version :
+     version : VI200041K
+     internal_generation_version : 1
+     autoincrement_version : false
+    icon_filename : .\description.ico
+    language : 2
+ elements :
+  identifier : 0x4ac601790015ad16
+  elements :
+   -
+     name : WIN_Add
+     identifier : 0x3dd8f9de3d16dece
+     internal_properties : CAAAAAgAAAAhHRkNuufP4OUbOrLCR+H5NaLoGNaaXYE1e++BGjHlO80Hsiv2yDWAxnJsVNwU7NwkLA==
+     physical_name : .\WIN_Add.wdw
+     type : 2
+   -
+     name : TEST_WIN_Main
+     identifier : 0x4b571a780013b902
+     internal_properties : CAAAAAgAAAD3U9/D4F3V1v8BVMiop3MHm8RmZkhYlFJ2BbGhqpENy3mHNpeYbt8qvHhiXibaphriYg==
+     physical_name : .\TEST_WIN_Main.wxt
+     type : 17
+   -
+     name : WIN_Log
+     identifier : 0x3dd8f9e20499df2c
+     internal_properties : CAAAAAgAAAA6EGKmBULq9cgucXUVhQIe1kvlBefzQ+nsFyB9CCPpP/UpUourE3pHmYV/eTm3Q7UfJw==
+     physical_name : .\WIN_Log.wdw
+     type : 2
+   -
+     name : Global procedures of WD Trigger
+     identifier : 0x3dd8f9df7674dede
+     internal_properties : CAAAAAgAAACC+PouncpifdAmWd2trnp+psV9ZWGtTwoM3yI6o5gEzGSeOZSTa9IfoZ0H8bEvyz2Hjw==
+     physical_name : .\Global procedures of WD Trigger.wdg
+     type : 7
+   -
+     name : WIN_Main
+     identifier : 0x3dd8f9e413badf4b
+     internal_properties : CAAAAAgAAAAWfH6iAX42OZziNanJS9rmansxOciW8rHJPjIx80nDFSffnDH3zz6L3VlDvUW7R7kDAw==
+     physical_name : .\WIN_Main.wdw
+     type : 2
+   -
+     name : WIN_Expense
+     identifier : 0x3dd8f9e35bc2df3b
+     internal_properties : CAAAAAgAAAC9mZWJNmNLVHmfrobGUvX9MazYGNg8kTZaLUcQCzDiLsoGtyYCxCn0Svbg2FiIcGCoqA==
+     physical_name : .\WIN_Expense.wdw
+     type : 2
+   -
+     name : WinDevMessageBox
+     identifier : 0x46c585be01144443
+     internal_properties : CAAAAAgAAABKwLJWVRIaxYyDhygATtcMBAdDW37pEFSu+KDlQqTw2NQq2fso0X3g7VVPqWlnE4VP1w==
+     physical_name : .\WinDevMessageBox.WDW
+     type : 2
+   -
+     name : WinDevDialogBox
+     identifier : 0x46c585c0011c4ca0
+     internal_properties : CAAAAAgAAAAwDmi0cyiAm6ZpeYimfN27TGkLE7hbml1KiVsqvXmTtVuHNQcQMd9CAzulE5NNNasVHQ==
+     physical_name : .\WinDevDialogBox.WDW
+     type : 2
+  other_elements :
+   -
+     physical_name : .\Description.rtf
+   -
+     physical_name : .\Description.gif
+  analysis : .\WD Trigger.ana\WD Trigger.wda
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components : []
+ report_and_queries_enabled : false
+ common_generation_directory : true
+ languages :
+  - en-GB
+ code_elements :
+  internal_properties : CAAAAAgAAAB/8PXkbF8AVDKeRYVGLcctZ+5qcaVb6t9QQy+B5Rc4dd8X+DhA4EeJoF1/pYoFWCgpr1blUn/1jCDl6PWFqtoVoXnIxMVg+vCP4APyxsM9nANm16kffzy9GrSdE4KFWWhqPyBFKQmw/xKh4rRhgZZekAfORpOd0mSoTrMEQMVAIfHc0m9wCw==
+  type_code : 0
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAABnKyPCdNeVlvYF/qW9ecA1Jk3NLNjtfDrmBwDNBiYl0AhEaIp6TQtIBUX+ZRzW3rDxsan23x1MI+QJnF6N6AHmBEZHbuVHX7aEGujfrUGIpScxgntljb3GlOfo4uIZnGaPMSdfz9MdgZIkJlTKgeDxTMma62nWSAhdHTPIywDIzn4H4KKfHRa0PvBi3eMSOSZzUOEVTiOPZ0U36KA9Husi0w==
+     code : |1-
+      
+      GLOBAL
+      	gsRights is string		// Rights of the user
+      	gbTrace is boolean		// Displays the trace window
+      LOCAL
+      	
+      gsRights = “L”
+      gbTrace = True
+      
+      // HF
+      HMode(hModeMulti)
+      HCreationIfNotFound(“*”)
+      
+      // Create the triggers
+      // 'Before' Trigger
+      HDescribeTrigger(CHARGE, “HAdd,HModify,HDelete”, Trigger_Proc, hTriggerBefore)
+      
+      // 'After' trigger
+      HDescribeTrigger(CHARGE, “HAdd,HModify,HDelete”, Trigger_Proc, hTriggerAfter)
+      
+      
+      CASE Error:
+      Error(<§@00000000000000000003§>,HErrorInfo())
+     type : 196608
+   -
+     internal_properties : CAAAAAgAAABBlo1pc2K0kDcqzqUH/aS2AvBMdsPMufNtWKPzWRt5x0pMeh2eAsjrR7m9TRD/NO5qiaFU8wXzagqf9K1inlyLg1KiBOOardIU6Sf+WZAaswUWHMasz84apqctI1e8rEmN+/9SLGG4lIYs7XLXmjku1c8ACiEMFqPYvWqmSiv/geBmvzTK0rWRnxKhPbrt
+     code : |1+
+      // Destroy the triggers
+      // 'Before' Trigger
+      HDeleteTrigger(“CHARGE”, “HAdd,HModify,HDelete”, hTriggerBefore)
+      // 'After' trigger
+      HDeleteTrigger(“CHARGE”, “HAdd,HModify,HDelete”, hTriggerAfter)
+     type : 196610
+   -
+     type : 196621
+   -
+     type : 196627
+     enabled : false
+  orphans :
+   -
+     name : WD Trigger
+     identifier : 0x4ac60179001dad93
+     code_elements :
+      type_code : 159
+      p_codes : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+rad :
+ internal_properties : CAAAAAgAAABhIL0UXeZmxDJxY3Xy0Q==
+project_explorer :
+ explorer_type : project
+ children :
+  -
+    name : Windows Store Apps API
+    explorer_type : custom_folder
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      en-GB : Unable to add the trigger
+     index : 3
+custom_note :
+ internal_properties : CAAAAAgAAAAd98VSJfHHqE3P0QHwrwdhn7ig8dWBR6valpUTgnAMTVXiDg==
